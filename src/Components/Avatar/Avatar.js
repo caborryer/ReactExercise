@@ -6,7 +6,7 @@ function Avatar({ name, image, motto, onButtonClick}) {
     <li>
       <div className="card-2">
         <img className="card-img-top"
-             src={image}/>
+             src={image} alt="ima"/>
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
           <p className="card-text">{motto}</p>
