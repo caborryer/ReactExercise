@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Avatar({ name, image, motto, onButtonClick }) {
+function Avatar({ name, image, motto, onButtonClick}) {
 
   return (
     <li>
@@ -10,12 +10,11 @@ function Avatar({ name, image, motto, onButtonClick }) {
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
           <p className="card-text">{motto}</p>
-          <button onClick={onButtonClick}>Switch on/off!</button>
+          <button onClick={ onButtonClick } >Switch on/off!</button>
         </div>
       </div>
     </li>
   )
-
 }
 
 export default Avatar;
