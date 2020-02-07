@@ -20,7 +20,7 @@ function Users() {
 
     useEffect(()=>{
       fetchApi()
-    },[setUsers])
+    },[users])
 
   let FMessage = <FlashMessage type="error" message= {error.message} />
 

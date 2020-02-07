@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import FlashMessage from '../error/FlashMessage';
 
 function Movies() {
   const[movies, setMovies] = useState([]);
+  const [error, setError] = useState({});
 
 
   async function fetchApi() {
@@ -10,7 +12,7 @@ function Movies() {
       const results = await axios({method:'get', url:'http://my-json-server.typicode.com/alexdr00/mock-data/movies'})
       setMovies(results.data)
     }catch (error) {
-      console.log(error)
+      setError(error)
     }
   }
 
@@ -18,8 +20,11 @@ function Movies() {
     fetchApi();
   }, [])
 
+  let FMessage = <FlashMessage type="error" message= {error.message} />
+
   return(
     <div className="container">
+      {error.message? (FMessage) : ''}
       <div className="row justify-content-center">
         <div className="col-12 p-5 row">
           {movies.map(movie=> (
