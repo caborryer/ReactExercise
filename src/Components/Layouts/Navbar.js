@@ -1,7 +1,7 @@
 import React from 'react';
 
 function NavBar() {
-  return(
+  return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <a className="navbar-brand" href="/home">Navbar</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
@@ -16,7 +16,6 @@ function NavBar() {
           <li className="nav-item">
             <a className="nav-link" href="/movies">Movies</a>
           </li>
-
         </ul>
       </div>
     </nav>
